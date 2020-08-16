@@ -1,0 +1,31 @@
+<link
+  href="https://fonts.googleapis.com/css2?family=Mali:wght@300&family=Pacifico&display=swap"
+  rel="stylesheet"
+/>
+
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary tint">
+    <ion-title color="secondary shade">
+      Live Feed
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="secondary" [fullscreen]="true">
+  <div class="post" *ngFor="let p of allPosts">
+    <ion-img *ngIf="p.imageUrl" src="{{p.imageUrl}}"></ion-img>
+
+    <div class="info">
+      <h6 class="message">{{p.text}}</h6>
+      <label class="user">{{p.from}}</label>
+      
+      <br>
+
+      <label class="timeStamp"
+        >{{p.timeStamp | date: "EE/MM/yyyy hh:mm:ss"}}</label
+      >
+    </div>
+  </div>
+</ion-content>
+
+

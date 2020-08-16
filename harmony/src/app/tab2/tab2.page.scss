@@ -1,0 +1,54 @@
+ion-title {
+  padding: 10px;
+  height: 100px;
+  font-size: 25px;
+  font-family: "Mali", cursive;
+  font-family: "Pacifico", cursive;
+}
+
+body {
+  font-family: "Mali", cursive;
+  font-family: "Pacifico", cursive;
+}
+
+span {
+  font-family: "Pacifico", cursive;
+}
+
+button {
+  padding: 5px;
+  border: 2px inline white;
+  border-radius: 5px;
+  text-align: center;
+  margin-left: 5px;
+  display: block;
+  justify-content: right;
+}
+
+ion-input {
+  justify-content: center;
+  display: inline-flex;
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+}
+ion-button {
+  color: secondary;
+  letter-spacing: normal;
+  word-spacing: normal;
+}
+
+ion-item{
+  letter-spacing: normal;
+  word-spacing: normal;
+  padding: 15px;
+  margin: auto;
+  margin-right: 10px;
+  border: 2px inline white;
+  border-radius: 15px;
+  margin-left: 5px;
+  display: block;
+  font-family: "Mali", cursive;
+  font-family: "Pacifico", cursive;
+}

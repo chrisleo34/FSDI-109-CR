@@ -1,0 +1,52 @@
+<link
+  href="https://fonts.googleapis.com/css2?family=Mali:wght@300&family=Pacifico&display=swap"
+  rel="stylesheet"
+/>
+<br />
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary tint">
+    <ion-title color="secondary shade">
+      Friends
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<br />
+<!-- Register friend -->
+
+<ion-content color="Secondary">
+  <ion-card-content color="primary" position="stacked">
+    <h2
+      style="padding: 5px; color: #a779ac;"
+      color="primary"
+      class="section-header"
+    >
+      Register new Friend
+    </h2>
+    <ion-item>
+      <ion-label style="color: #b57bbb; font-size: 18px;" position="stacked"
+        >Friend name:</ion-label
+      >
+      <ion-input [(ngModel)]="model.name" name="friendName"></ion-input>
+    </ion-item>
+    <ion-button
+      (click)="saveFriend()"
+      style="color: #916096; font-size: 16px;"
+      color="secondary"
+    >
+      Save friend
+    </ion-button>
+  </ion-card-content>
+
+  <br />
+  <!-- List my friends -->
+  <ion-infinite-scroll position="stacked">
+    <ion-label class="section-header">Current Friends</ion-label>
+  </ion-infinite-scroll>
+  <ion-content [scrollEvents]="true">
+    <ion-item style="height: 10%;" *ngFor="let friend of myFriends">
+      <ion-icon name="person-circle-outline"></ion-icon>
+      <ion-label>{{friend.name}}</ion-label>
+    </ion-item>
+  </ion-content>
+  <br />
+</ion-content>
